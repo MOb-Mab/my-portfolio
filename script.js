@@ -1,3 +1,2 @@
-function changeText() {
-  document.getElementById("text").innerText = "You clicked the button!";
-}
+// โค้ด JavaScript ของคุณ
+console.log("Portfolio loaded successfully!");
