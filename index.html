@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Portfolio</title>
+    <title>My Portfolio</title>
 
     <!-- เชื่อมต่อไฟล์ CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -11,11 +11,228 @@
     <!-- เชื่อมต่อ Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+</style>
+</head>
 <body>
-    <!-- เนื้อหาของเว็บไซต์ -->
-    <h1>Hello World!</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <!-- เชื่อมต่อไฟล์ JavaScript -->
-    <script src="script.js"></script>
-</body>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Pinyada Bunyawat</h1>
+                    <p class="subtitle">Computer Science Student</p>
+                    <p>I'm passionate about creating beautiful, functional designs that solve real problems and deliver exceptional user experiences. Let's build something amazing together.</p>
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                  <img src="https://i.pinimg.com/736x/11/82/1e/11821e8301b23e642eb80809e4148a0c.jpg" alt="Home Image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <div class="about-image">🎨</div>
+                <div class="about-text">
+                    <h3>Hello, I'm [Your Name]</h3>
+                    <p>With over 5 years of experience in design and development, I specialize in creating digital solutions that combine aesthetic appeal with functional excellence. My approach focuses on understanding user needs and translating them into engaging experiences.</p>
+                    <p>I believe that great design is not just about how something looks, but how it works. Every project is an opportunity to solve problems creatively and make a positive impact.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <div class="skills-content fade-in">
+                <div class="skills-text">
+                    <h3>What I Do</h3>
+                    <p>I combine technical expertise with creative vision to deliver comprehensive digital solutions. From initial concept to final implementation, I ensure every detail contributes to the overall success of the project.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">🎨</div>
+                            <div class="skill-name">UI/UX Design</div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-bar" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">💻</div>
+                            <div class="skill-name">Web Development</div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-bar" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">📱</div>
+                            <div class="skill-name">Mobile Design</div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-bar" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">🚀</div>
+                            <div class="skill-name">Brand Identity</div>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-bar" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Work</h2>
+            <div class="portfolio-grid fade-in">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🏪</div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <p class="portfolio-desc">A comprehensive e-commerce solution with modern design, seamless user experience, and robust functionality for online retail.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">📱</div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Mobile App Design</h3>
+                        <p class="portfolio-desc">Clean and intuitive mobile application interface designed for enhanced user engagement and optimal user experience.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🎨</div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Brand Identity System</h3>
+                        <p class="portfolio-desc">Complete brand identity package including logo design, color palette, typography, and visual guidelines for consistency.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Identity</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Work Together</h2>
+            <div class="contact-content fade-in">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to start your next project? I'd love to hear about your ideas and discuss how we can bring them to life together.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                hello@yourname.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <strong>Phone</strong><br>
+                                +1 (555) 123-4567
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Location</strong><br>
+                                New York, NY
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Project Discussion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-input" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </html>
