@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking App - Pinyada Portfolio</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#portfolio">Portfolio</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Page -->
+    <div class="project-detail">
+        <div class="container">
+            <button class="back-button" onclick="window.location.href='../index.html#portfolio'">← Back to Portfolio</button>
+            
+            <div class="project-header">
+                <h1>Condominium Parking Reservation Application</h1>
+                <p>A comprehensive mobile solution designed to streamline parking management in residential complexes</p>
+            </div>
+
+            <div class="project-content">
+                <div class="image-slider">
+                    <div class="slider-container">
+                        <div class="slide active">
+                            <img src="../images/parking/slide1.jpg" alt="Parking App Interface" onerror="this.parentElement.innerHTML='🚗<p>Main Interface</p>'">
+                        </div>
+                        <div class="slide">
+                            <img src="../images/parking/slide2.jpg" alt="Mobile Design" onerror="this.parentElement.innerHTML='📱<p>Mobile Design</p>'">
+                        </div>
+                        <div class="slide">
+                            <img src="../images/parking/slide3.jpg" alt="Booking System" onerror="this.parentElement.innerHTML='🏢<p>Booking System</p>'">
+                        </div>
+                        <div class="slide">
+                            <img src="../images/parking/slide4.jpg" alt="User Flow" onerror="this.parentElement.innerHTML='⚡<p>User Flow</p>'">
+                        </div>
+                    </div>
+                    <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
+                    <button class="slider-nav next" onclick="changeSlide(1)">›</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h2>Project Overview</h2>
+                    <p>This project addressed the common issue of parking management in condominiums by creating an intuitive mobile application. The system allows residents to reserve parking spots in advance, reducing conflicts and improving the overall living experience.</p>
+                    
+                    <p>I was responsible for designing the complete user interface using Figma, focusing on creating a user-friendly experience that would be accessible to residents of all ages. The design emphasized simplicity while maintaining all necessary functionality.</p>
+
+                    <p>The application features real-time availability checking, booking confirmation, and an admin panel for property management. Special attention was paid to the visual hierarchy and user flow to ensure seamless navigation throughout the booking process.</p>
+
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">UI/UX Designer, Frontend Developer</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">3 months</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Team Size:</span>
+                            <span class="meta-value">4 members</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Platform:</span>
+                            <span class="meta-value">Mobile Application</span>
+                        </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <h3>Technologies Used</h3>
+                        <div class="tag-list">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Mobile Design</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">Usability Testing</span>
+                        </div>
+                    </div>
+
+                    <div class="project-challenges">
+                        <h3>Challenges & Solutions</h3>
+                        <ul>
+                            <li><strong>User Accessibility:</strong> Designed for users of all ages with clear typography and intuitive icons</li>
+                            <li><strong>Real-time Updates:</strong> Implemented live status updates to prevent booking conflicts</li>
+                            <li><strong>Emergency Situations:</strong> Added quick booking cancellation and emergency contact features</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-results">
+                        <h3>Results & Impact</h3>
+                        <ul>
+                            <li>Reduced parking conflicts by 80% in pilot testing</li>
+                            <li>Improved resident satisfaction scores</li>
+                            <li>Streamlined property management processes</li>
+                            <li>Positive feedback on user interface design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            slides[slideIndex - 1].classList.remove('active');
+            dots[slideIndex - 1].classList.remove('active');
+            
+            slideIndex += direction;
+            
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            }
+            
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+        }
+
+        function currentSlide(slideNumber) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            slides[slideIndex - 1].classList.remove('active');
+            dots[slideIndex - 1].classList.remove('active');
+            
+            slideIndex = slideNumber;
+            
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+        }
+
+        // Auto-slide
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
