@@ -345,6 +345,170 @@ section {
     font-weight: 600;
     color: var(--forest);
 }
+  /* Certificates Section */
+  #certificates {
+    background: white;
+}
+
+.certificates-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificate-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(166, 178, 139, 0.2);
+    transition: all 0.3s ease;
+}
+
+.certificate-item:last-child {
+    border-bottom: none;
+}
+
+.certificate-item:hover {
+    transform: translateX(10px);
+}
+
+.certificate-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.certificate-item:nth-child(even):hover {
+    transform: translateX(-10px);
+}
+
+.certificate-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(28, 53, 45, 0.15);
+    background: linear-gradient(135deg, var(--cream), var(--peach));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--forest);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.certificate-image:hover {
+  transform: scale(1.05);
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.certificate-details {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.certificate-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.certificate-date {
+    color: var(--sage);
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.certificate-date::before {
+    content: "📅";
+    font-size: 1rem;
+}
+
+.certificate-description {
+    color: rgba(28, 53, 45, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Image Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  max-width: 70%;
+  max-height: 70%;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.7); }
+  to { transform: scale(1); }
+}
+
+.modal-content img {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
 
 /* Portfolio Section */
 #portfolio {
@@ -381,6 +545,9 @@ section {
     font-size: 3rem;
     color: white;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-content {
@@ -432,7 +599,7 @@ section {
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: start;
 }
 
@@ -477,6 +644,8 @@ section {
     padding: 2.5rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    max-width: 500px;
+    width: 100%;
 }
 
 .form-group {
@@ -755,9 +924,12 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+  .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  
     
     .mobile-menu {
         display: flex;
@@ -766,13 +938,18 @@ section {
     .hero-content,
     .about-content,
     .skills-content,
-    .contact-content,
-    .project-content {
+    .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
+    .contact-content {
+      gap: 3rem;
+  }
 
+  .contact-form {
+      max-width: 100%;
+  }
     .hero-text h1 {
         font-size: 2.5rem;
     }
@@ -812,4 +989,26 @@ section {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+    .certificate-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+  }
+
+  .certificate-item:nth-child(even) {
+      flex-direction: column;
+  }
+
+  .certificate-item:hover,
+  .certificate-item:nth-child(even):hover {
+      transform: translateY(-5px);
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+  }
 }
