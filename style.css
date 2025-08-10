@@ -330,14 +330,12 @@ section {
 .skill-icon {
     width: 50px;
     height: 50px;
-    background: var(--sage);
+    object-fit: contain;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
     margin-right: 1rem;
+    padding: 8px;
+    
+    transition: all 0.3s ease;
 }
 
 .skill-name {
@@ -430,10 +428,7 @@ section {
     margin-bottom: 0.8rem;
 }
 
-.certificate-date::before {
-    content: "📅";
-    font-size: 1rem;
-}
+
 
 .certificate-description {
     color: rgba(28, 53, 45, 0.7);
@@ -767,7 +762,8 @@ section {
     font-size: 4rem;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 0;
+    
 }
 
 .slide.active {
@@ -778,7 +774,9 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 0;
+    display: block;
 }
 
 .slide p {
