@@ -3,373 +3,529 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>My Portfolio</title>
-
-    <!-- เชื่อมต่อไฟล์ CSS -->
+    <title>Pinyada Bunyawat - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    
-    <!-- เชื่อมต่อ Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-      <div class="nav-container">
-          <div class="logo">Portfolio</div>
-          <ul class="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#certificates">Certificates</a></li>
-              <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="mobile-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-      </div>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home">
-      <div class="container">
-          <div class="hero-content">
-              <div class="hero-text">
-                  <h1>Pinyada Bunyawat</h1>
-                  <p class="subtitle">Computer Science Student</p>
-                  <p> I'm a computer science student passionate about front-end development. I love creating clean, user-friendly web experiences and learning new technologies through hands-on projects.</p>
-                  <div class="cta-buttons">
-                      <a href="#portfolio" class="btn-primary">View My Work</a>
-                      <a href="#contact" class="btn-secondary">Get In Touch</a>
-                  </div>
-              </div>
-              <div class="hero-visual">
-                  <img src="img/peep-102.png" alt="Portfolio Image" />
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-      <div class="container">
-          <h2 class="section-title fade-in">About Me</h2>
-          <div class="about-content fade-in">
-            <div class="hero-visual">
-              <img src="img/Feb-Setup_3.jpg" alt="Portfolio Image" />
-          </div>
-              <div class="about-text">
-                  <h3>Hello, I'm Pinyada</h3>
-                  <p>With an interest in both technology and design, I enjoy building digital experiences that are not only visually appealing but also practical and user-friendly. I focus on understanding user needs and turning them into simple, effective solutions.</p>
-                  <p>I believe good design goes beyond how things look—it’s about how they work. For me, each project is a chance to learn, solve real problems, and improve how people interact with technology.</p>
-                  
-                 <!-- <div class="stats">
-                      <div class="stat-item">
-                          <span class="stat-number">15+</span>
-                          <span class="stat-label">Projects Completed</span>
-                      </div>
-                      <div class="stat-item">
-                          <span class="stat-number">10+</span>
-                          <span class="stat-label">Happy Clients</span>
-                      </div>
-                      <div class="stat-item">
-                          <span class="stat-number">2+</span>
-                          <span class="stat-label">Years Experience</span>
-                      </div>-->
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-      <div class="container">
-          <h2 class="section-title fade-in">Skills & Expertise</h2>
-          <div class="skills-content fade-in">
-              <div class="skills-text">
-                  <h3>What I Do</h3>
-                  <p>I enjoy combining technical skills with creativity to build useful and user-friendly digital projects. From planning to coding, I aim to make sure each part of the project works well and supports the overall goal.</p>
-              </div>
-              <div class="skills-grid">
-                  <div class="skill-item">
-                      <div class="skill-header">
-                        <img class="skill-icon" 
-                        src="img/UX:UI icon.png" 
-                        alt="UX/UI Icon">
-                          <div class="skill-name">UI/UX Design</div>
-                      </div>
-                      <!-- <div class="skill-progress">
-                          <div class="skill-bar" style="width: 90%"></div>
-                      </div>-->
-                  </div>
-                  <div class="skill-item">
-                      <div class="skill-header">
-                        <img class="skill-icon" 
-                        src="img/website icon.png" 
-                        alt="Website Icon">
-                          <div class="skill-name">Web Development</div>
-                      </div>
-                      <!--<div class="skill-progress">
-                          <div class="skill-bar" style="width: 85%"></div>
-                      </div>-->
-                  </div>
-                  <div class="skill-item">
-                      <div class="skill-header">
-                        <img class="skill-icon" 
-                        src="img/Mobile icon.png" 
-                        alt="Mobile Icon">
-                          <div class="skill-name">Mobile Development</div>
-                      </div>
-                      <!--<div class="skill-progress">
-                          <div class="skill-bar" style="width: 80%"></div>
-                      </div>-->
-                  </div>
-                  <div class="skill-item">
-                      <div class="skill-header">
-                        <img class="skill-icon" 
-                        src="img/Backend Icon.png" 
-                        alt="Backend Icon">
-                          <div class="skill-name">Backend Development</div>
-                      </div>
-                    <!--<div class="skill-progress">
-                          <div class="skill-bar" style="width: 88%"></div>
-                      </div>-->
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- Certificates Section -->
-  <section id="certificates">
-    <div class="container">
-        <h2 class="section-title fade-in">Certificates</h2>
-        <div class="certificates-container fade-in">
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/Responsive_Web_Design.png')">
-                    <img src="img/Responsive_Web_Design.png" alt="Responsive Web Design" onerror="this.style.display='none'; this.parentElement.innerHTML='🏆';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Responsive Web Design</h3>
-                    <div class="certificate-date">October 25, 2021</div>
-                    <p class="certificate-description">Earned "Responsive Web Design" Certification from freeCodeCamp (300+ hours) — Built multiple websites applying HTML, CSS, Flexbox, Grid, and accessibility best practices.</p>
-                </div>
-            </div>
-            
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/Legacy_JavaScript_Algorithms_and_Data_Structures.png')">
-                    <img src="img/Legacy_JavaScript_Algorithms_and_Data_Structures.png" alt="Legacy JavaScript Algorithms and Data Structures" onerror="this.style.display='none'; this.parentElement.innerHTML='🎯';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Legacy JavaScript Algorithms and Data Structures</h3>
-                    <div class="certificate-date">November 1, 2021</div>
-                    <p class="certificate-description">Earned "Legacy JavaScript Algorithms and Data Structures" Certification from freeCodeCamp (300+ hours) — Developed and optimized algorithms using ES6, recursion, and core data structures to solve real coding challenges.</p>
-                </div>
-            </div>
-            
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/Front_End_Development_Libraries.png')">
-                    <img src="img/Front_End_Development_Libraries.png" alt="Front End Development Libraries" onerror="this.style.display='none'; this.parentElement.innerHTML='📱';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Front End Development Libraries</h3>
-                    <div class="certificate-date">November 10, 2021</div>
-                    <p class="certificate-description">Earned "Front End Development Libraries" Certification from freeCodeCamp (300+ hours) — Created dynamic, responsive web interfaces using React, Redux, jQuery, Bootstrap, and Sass.</p>
-                </div>
-            </div>
-
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/AI_for_thai.png')">
-                    <img src="img/AI_for_thai.png" alt="AI" onerror="this.style.display='none'; this.parentElement.innerHTML='🎯';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Artificial Intelligence Skills Training - AI for Thai Platform </h3>
-                    <div class="certificate-date">February 1, 2025</div>
-                    <p class="certificate-description">Earned "Artificial Intelligence Skills and AI Platform Application for Thai in 2025" Certification from NECTEC & NSTDA — Gained practical experience in AI Pathumma LLM usage and implementation.</p>
-                </div>
-            </div>
-            
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/Learn_WordPress.png')">
-                    <img src="img/Learn_WordPress.png" alt="Learn WordPress" onerror="this.style.display='none'; this.parentElement.innerHTML='🔧';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Learn WordPress</h3>
-                    <div class="certificate-date">August 6, 2025</div>
-                    <p class="certificate-description">Earned "Learn WordPress" Certification from Simplilearn SkillUp — Gained foundational skills in WordPress site creation, theme customization, plugin integration, and content management.</p>
-                </div>
-            </div>
-            
-            <div class="certificate-item">
-                <div class="certificate-image" onclick="openModal('img/Wordpress_Elementor_from_basics_to_advanced_by_Azharul_Rafy.png')">
-                    <img src="img/Wordpress_Elementor_from_basics_to_advanced_by_Azharul_Rafy.png" alt="Introduction to WordPress" onerror="this.style.display='none'; this.parentElement.innerHTML='☁️';">
-                </div>
-                <div class="certificate-details">
-                    <h3 class="certificate-title">Wordpress Elementor From Basics To Advanced</h3>
-                    <div class="certificate-date">November 8, 2025</div>
-                    <p class="certificate-description">Earned "WordPress Elementor from Basics to Advanced" Certification from Cursa (7+ hours) — Gained understanding of responsive website creation concepts and advanced theme customization with Elementor.</p>
-                </div>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Image Modal-->
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img id="modalImage" src="" alt="Certificate">
-    </div>
-</div> 
-
-
-
-  <!-- Portfolio Section-->
-  <section id="portfolio">
-    <div class="container">
-        <h2 class="section-title fade-in">My Project</h2>
-        <div class="portfolio-grid fade-in">
-            <div class="portfolio-item" onclick="window.location.href='projects/parking.html'">
-              <img class="portfolio-image" 
-              src="img/car.jpg" 
-              alt="Condominium Parking Project">
-                <div class="portfolio-content">
-                    <h3 class="portfolio-title">Condominium Parking Reservation Application</h3>
-                    <p class="portfolio-desc">Designed user interfaces and developed the front-end for a mobile parking reservation system to improve user convenience and efficiency.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Figma</span>
-                        <span class="tag">Mobile</span>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">Computer Science Student</div>
+                    <h1>Pinyada Bunyawat</h1>
+                    <p class="subtitle">Frontend Developer & UI/UX Enthusiast</p>
+                    <p>I'm passionate about creating clean, user-friendly web experiences and learning new technologies through hands-on projects. I love turning complex problems into simple, beautiful designs.</p>
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            Get In Touch
+                        </a>
                     </div>
                 </div>
-            </div>
-            
-            <div class="portfolio-item" onclick="window.location.href='projects/ar-project.html'">
-              <img class="portfolio-image" 
-              src="img/AR.jpg" 
-              alt="AR Website Project">
-                <div class="portfolio-content">
-                    <h3 class="portfolio-title">Web Platform Development for AR Integration</h3>
-                    <p class="portfolio-desc">Built interactive web interfaces and worked with team members to create an engaging AR experience.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Web Application</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-item" onclick="window.location.href='projects/aed-service.html'">
-              <img class="portfolio-image" 
-              src="img/AED.jpg" 
-              alt="AED Project">
-                <div class="portfolio-content">
-                    <h3 class="portfolio-title">AED Service Management System</h3>
-                    <p class="portfolio-desc">Designed user flows and front-end structure for both mobile and web platforms, focusing on usability and seamless interaction.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Figma</span>
-                        <span class="tag">Web Application</span>
-                        <span class="tag">Design System</span>
-                        <span class="tag">Mobile</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-item" onclick="window.location.href='projects/ux-website.html'">
-              <img class="portfolio-image" 
-              src="img/UX:UI.jpg" 
-              alt="UX/UI Project">
-                <div class="portfolio-content">
-                    <h3 class="portfolio-title">UX/UI Design Services Website</h3>
-                    <p class="portfolio-desc">Showcases a responsive and user-centered website designed using WordPress to promote UX/UI design services.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">WordPress</span>
+                <div class="hero-visual">
+                    <div class="image-container">
+                        <img src="img/peep-102.png" alt="Pinyada Bunyawat" />
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-        <h2 class="section-title fade-in">Let's Work Together</h2>
-        <div class="contact-content fade-in">
-            <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p>Ready to start your next project? I'd love to hear about your ideas and discuss how we can bring them to life together.</p>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <div class="about-visual">
+                    <div class="image-frame">
+                        <img src="img/Feb-Setup_3.jpg" alt="Pinyada Bunyawat" />
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-subtitle">Get to know me</div>
+                    <h3>Hello, I'm Pinyada</h3>
+                    <p>With an interest in both technology and design, I enjoy building digital experiences that are not only visually appealing but also practical and user-friendly. I focus on understanding user needs and turning them into simple, effective solutions.</p>
+                    <p>I believe good design goes beyond how things look—it's about how they work. For me, each project is a chance to learn, solve real problems, and improve how people interact with technology.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Creative Problem Solver</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>User-Centered Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast Learner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <div class="skills-intro fade-in">
+                <h3>What I Do</h3>
+                <p>I enjoy combining technical skills with creativity to build useful and user-friendly digital projects. From planning to coding, I aim to make sure each part of the project works well and supports the overall goal.</p>
+            </div>
+            <div class="skills-grid fade-in">
+                <div class="skill-item">
+                    <div class="skill-icon-container">
+                        <img class="skill-icon" src="img/UX:UI icon.png" alt="UX/UI Design">
+                    </div>
+                    <div class="skill-content">
+                        <h4 class="skill-title">UI/UX Design</h4>
+                        <p class="skill-description">Creating intuitive and engaging user interfaces and experiences</p>
+                    </div>
+                </div>
                 
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            pinyada.b@ku.th
+                <div class="skill-item">
+                    <div class="skill-icon-container">
+                        <img class="skill-icon" src="img/website icon.png" alt="Web Development">
+                    </div>
+                    <div class="skill-content">
+                        <h4 class="skill-title">Web Development</h4>
+                        <p class="skill-description">Building responsive and performant web applications</p>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon-container">
+                        <img class="skill-icon" src="img/Mobile icon.png" alt="Mobile Development">
+                    </div>
+                    <div class="skill-content">
+                        <h4 class="skill-title">Mobile Development</h4>
+                        <p class="skill-description">Developing cross-platform mobile applications</p>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon-container">
+                        <img class="skill-icon" src="img/Backend Icon.png" alt="Backend Development">
+                    </div>
+                    <div class="skill-content">
+                        <h4 class="skill-title">Backend Development</h4>
+                        <p class="skill-description">Creating robust server-side applications and APIs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">My Projects</h2>
+            <div class="portfolio-intro fade-in">
+                <p>Here are some of my recent projects that showcase my skills and passion for development</p>
+            </div>
+            <div class="portfolio-grid fade-in">
+                <div class="portfolio-item" onclick="window.location.href='projects/parking.html'">
+                    <div class="portfolio-image">
+                        <img src="img/car.jpg" alt="Condominium Parking Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <strong>Phone</strong><br>
-                            095-271-8426
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Condominium Parking Reservation Application</h3>
+                        <p class="portfolio-desc">Designed user interfaces and developed the front-end for a mobile parking reservation system to improve user convenience and efficiency.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="window.location.href='projects/ar-project.html'">
+                    <div class="portfolio-image">
+                        <img src="img/AR.jpg" alt="AR Website Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Web Platform Development for AR Integration</h3>
+                        <p class="portfolio-desc">Built interactive web interfaces and worked with team members to create an engaging AR experience.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Application</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="window.location.href='projects/aed-service.html'">
+                    <div class="portfolio-image">
+                        <img src="img/AED.jpg" alt="AED Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">AED Service Management System</h3>
+                        <p class="portfolio-desc">Designed user flows and front-end structure for both mobile and web platforms, focusing on usability and seamless interaction.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Web Application</span>
+                            <span class="tag">Design System</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="window.location.href='projects/ux-website.html'">
+                    <div class="portfolio-image">
+                        <img src="img/UX:UI.jpg" alt="UX/UI Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">UX/UI Design Services Website</h3>
+                        <p class="portfolio-desc">Showcases a responsive and user-centered website designed using WordPress to promote UX/UI design services.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Elementor</span>
+                            <span class="tag">Responsive Design</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title fade-in">Certificates & Achievements</h2>
+            <div class="certificates-intro fade-in">
+                <p>My learning journey and professional certifications</p>
+            </div>
+            <div class="certificates-grid fade-in">
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/Responsive_Web_Design.png')">
+                        <img src="img/Responsive_Web_Design.png" alt="Responsive Web Design">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Responsive Web Design</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">freeCodeCamp</span>
+                            <span class="certificate-date">October 25, 2021</span>
+                        </div>
+                        <p class="certificate-description">Earned "Responsive Web Design" Certification (300+ hours) — Built multiple websites applying HTML, CSS, Flexbox, Grid, and accessibility best practices.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/Legacy_JavaScript_Algorithms_and_Data_Structures.png')">
+                        <img src="img/Legacy_JavaScript_Algorithms_and_Data_Structures.png" alt="Legacy JavaScript Algorithms and Data Structures">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Legacy JavaScript Algorithms and Data Structures</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">freeCodeCamp</span>
+                            <span class="certificate-date">November 1, 2021</span>
+                        </div>
+                        <p class="certificate-description">Earned "Legacy JavaScript Algorithms and Data Structures" Certification (300+ hours) — Developed and optimized algorithms using ES6, recursion, and core data structures.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">Data Structures</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-input" placeholder="Project Discussion" required>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/Front_End_Development_Libraries.png')">
+                        <img src="img/Front_End_Development_Libraries.png" alt="Front End Development Libraries">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Front End Development Libraries</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">freeCodeCamp</span>
+                            <span class="certificate-date">November 10, 2021</span>
+                        </div>
+                        <p class="certificate-description">Earned "Front End Development Libraries" Certification (300+ hours) — Created dynamic, responsive web interfaces using React, Redux, jQuery, Bootstrap, and Sass.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Redux</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-input" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/AI_for_thai.png')">
+                        <img src="img/AI_for_thai.png" alt="AI for Thai Platform">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Artificial Intelligence Skills Training</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">NECTEC & NSTDA</span>
+                            <span class="certificate-date">February 1, 2025</span>
+                        </div>
+                        <p class="certificate-description">Earned "Artificial Intelligence Skills and AI Platform Application for Thai in 2025" Certification — Gained practical experience in AI Pathumma LLM usage and implementation.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">AI</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">LLM</span>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
-            </form>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/Learn_WordPress.png')">
+                        <img src="img/Learn_WordPress.png" alt="Learn WordPress">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Learn WordPress</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">Simplilearn SkillUp</span>
+                            <span class="certificate-date">August 6, 2025</span>
+                        </div>
+                        <p class="certificate-description">Earned "Learn WordPress" Certification — Gained foundational skills in WordPress site creation, theme customization, plugin integration, and content management.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">CMS</span>
+                            <span class="skill-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('img/Wordpress_Elementor_from_basics_to_advanced_by_Azharul_Rafy.png')">
+                        <img src="img/Wordpress_Elementor_from_basics_to_advanced_by_Azharul_Rafy.png" alt="WordPress Elementor">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">WordPress Elementor From Basics To Advanced</h3>
+                        <div class="certificate-meta">
+                            <span class="certificate-provider">Cursa</span>
+                            <span class="certificate-date">November 8, 2025</span>
+                        </div>
+                        <p class="certificate-description">Earned "WordPress Elementor from Basics to Advanced" Certification (7+ hours) — Gained understanding of responsive website creation concepts and advanced theme customization with Elementor.</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Elementor</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Page Builder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Work Together</h2>
+            <div class="contact-intro fade-in">
+                <p>Ready to bring your ideas to life? Let's create something amazing together</p>
+            </div>
+            <div class="contact-content fade-in">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email</strong>
+                                <span>pinyada.b@ku.th</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Phone</strong>
+                                <span>095-271-8426</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Location</strong>
+                                <span>Bangkok, Thailand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Project Discussion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-input" rows="5" placeholder="Tell me about your project or how I can help you..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">Portfolio</div>
+                    <p>Creating digital experiences that make a difference</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#portfolio">Projects</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pinyada Bunyawat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </span>
+            <img id="modalImage" src="" alt="Certificate">
         </div>
     </div>
-</section>
 
-<script>
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-              const target = document.querySelector(this.getAttribute('href'));
-              if (target) {
-                  target.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                  });
-              }
-          });
-      });
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-      // Contact form handling
-      document.querySelector('.contact-form').addEventListener('submit', function(e) {
-          e.preventDefault();
-          alert('Thank you for your message! I will get back to you soon.');
-          this.reset();
-      });
-      // Modal functionality for certificate images
-      function openModal(imageSrc) {
+        // Contact form handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Modal functionality for certificate images
+        function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
             modalImage.src = imageSrc;
@@ -389,10 +545,24 @@
                 closeModal();
             }
         });
-  </script>
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
