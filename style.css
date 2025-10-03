@@ -29,6 +29,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for mobile */
 }
 
 /* Navigation */
@@ -75,6 +76,9 @@ nav {
     transition: var(--transition);
     position: relative;
     padding: 0.5rem 0;
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -100,6 +104,10 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
 }
 
 .mobile-menu span {
@@ -190,6 +198,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px; /* Touch target */
 }
 
 .btn-primary:hover {
@@ -211,6 +220,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px; /* Touch target */
 }
 
 .btn-secondary:hover {
@@ -478,7 +488,7 @@ section {
     background: white;
     color: var(--primary);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
@@ -486,7 +496,8 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    min-height: 44px; /* Touch target */
 }
 
 .btn-view:hover {
@@ -521,7 +532,7 @@ section {
 .tag {
     background: var(--primary-light);
     color: var(--primary);
-    padding: 0.2rem 0.6rem;
+    padding: 0.4rem 0.8rem; /* Increased padding for touch */
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 500;
@@ -644,7 +655,7 @@ section {
 .skill-tag {
     background: var(--primary-light);
     color: var(--primary);
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.6rem; /* Increased padding for touch */
     border-radius: 10px;
     font-size: 0.7rem;
     font-weight: 500;
@@ -706,14 +717,15 @@ section {
 }
 
 .contact-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* Increased for touch */
+    height: 50px; /* Increased for touch */
     background: var(--primary);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .contact-text {
@@ -758,13 +770,14 @@ section {
 
 .form-input {
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem; /* Increased padding for touch */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased font size */
     transition: var(--transition);
+    min-height: 48px; /* Minimum touch target */
 }
 
 .form-input:focus {
@@ -821,9 +834,10 @@ section {
     display: block;
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem; /* Increased spacing */
     transition: var(--transition);
     font-size: 0.85rem;
+    padding: 0.2rem 0; /* Added padding for touch */
 }
 
 .footer-column a:hover {
@@ -855,7 +869,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .modal-content {
@@ -924,7 +938,7 @@ section {
     background: var(--primary);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem; /* Increased padding */
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -934,6 +948,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px; /* Touch target */
 }
 
 .back-button:hover {
@@ -981,7 +996,7 @@ section {
 .slider-container {
     position: relative;
     width: 100%;
-    height: 600px; /* เพิ่มความสูงให้ใหญ่ขึ้น */
+    height: 600px;
     border-radius: 16px;
     overflow: hidden;
     background: var(--light);
@@ -1065,6 +1080,8 @@ section {
     cursor: pointer;
     transition: var(--transition);
     border: 3px solid transparent;
+    min-width: 16px; /* Prevent shrinking */
+    min-height: 16px; /* Prevent shrinking */
 }
 
 .dot.active {
@@ -1284,8 +1301,26 @@ section {
     opacity: 0.8;
 }
 
-/* Responsive */
+/* ============================ */
+/* RESPONSIVE DESIGN - MOBILE FIRST */
+/* ============================ */
+
+/* Base mobile styles */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Navigation */
     .nav-links {
         display: none;
     }
@@ -1294,9 +1329,17 @@ section {
         display: flex;
     }
 
-    .hero-content,
-    .about-content,
-    .contact-content {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    /* Home Section */
+    #home {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
@@ -1304,55 +1347,86 @@ section {
 
     .hero-text h1 {
         font-size: 2rem;
+        line-height: 1.3;
     }
 
-    .section-title {
-        font-size: 1.5rem;
+    .hero-text .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
     }
 
     .cta-buttons {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-links {
-        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    /* Responsive สำหรับ Flexbox */
-    .skills-grid,
-    .portfolio-grid,
-    .certificates-grid {
-        flex-direction: column;
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .hero-visual img {
+        max-width: 280px;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-visual img {
+        max-width: 250px;
+    }
+
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-features {
         align-items: center;
     }
 
-    .skill-item,
-    .portfolio-item,
-    .certificate-card {
+    .feature-item {
+        justify-content: center;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .skill-item {
         flex: 1 1 100%;
         max-width: none;
         min-width: auto;
         width: 100%;
-    }
-
-    .skill-item {
+        padding: 1.5rem;
         flex-direction: column;
         text-align: center;
         gap: 1rem;
-        padding: 1.5rem;
     }
-    
+
     .skill-icon-container {
         width: 50px;
         height: 50px;
@@ -1360,98 +1434,336 @@ section {
         margin: 0 auto;
     }
 
-    section {
-        padding: 3rem 0;
+    .skill-title {
+        font-size: 1.1rem;
     }
 
-    .container {
-        padding: 0 1rem;
+    /* Portfolio Section */
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
 
-    /* Responsive for Project Pages - แก้ไขใหม่ */
+    .portfolio-item {
+        flex: 1 1 100%;
+        max-width: none;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .portfolio-image {
+        height: 180px;
+    }
+
+    .portfolio-content {
+        padding: 1.25rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-desc {
+        font-size: 0.85rem;
+    }
+
+    /* Certificates Section */
+    .certificates-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .certificate-card {
+        flex: 1 1 100%;
+        max-width: none;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .certificate-image {
+        height: 140px;
+    }
+
+    .certificate-content {
+        padding: 1rem;
+    }
+
+    .certificate-title {
+        font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-input {
+        padding: 0.9rem;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Project Pages */
     .project-detail {
         padding: 100px 0 40px;
     }
-    
+
     .project-header h1 {
         font-size: 2rem;
     }
-    
+
+    .project-content {
+        gap: 2rem;
+    }
+
     .slider-container {
         height: 400px;
     }
-    
+
     .slider-nav {
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
     }
-    
+
     .slider-nav.prev {
         left: 1rem;
     }
-    
+
     .slider-nav.next {
         right: 1rem;
     }
-    
+
     .image-slider {
         padding: 1.5rem;
     }
-    
+
     .project-info {
         padding: 2rem;
     }
-    
+
     .project-info h2 {
         font-size: 1.6rem;
     }
-    
+
     .project-info p {
         font-size: 1rem;
     }
-    
+
+    .project-meta {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
     .meta-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
-    
-    .project-meta {
-        grid-template-columns: 1fr;
-        padding: 1.5rem;
+
+    /* Modal */
+    .modal.show {
+        padding: 0.5rem;
+    }
+
+    .modal-content img {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Small mobile devices (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
     .slider-container {
         height: 300px;
     }
-    
+
     .project-header h1 {
         font-size: 1.75rem;
     }
-    
+
     .slider-dots {
         gap: 0.5rem;
     }
-    
+
     .dot {
         width: 12px;
         height: 12px;
     }
-    
+
     .project-info {
         padding: 1.5rem;
     }
-    
+
     .project-info h2 {
         font-size: 1.4rem;
     }
-    
+
     .slider-nav {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
+    }
+
+    /* Reduce padding further for very small screens */
+    .skill-item,
+    .portfolio-item,
+    .certificate-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Landscape mode for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    #home {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+        flex: 1;
+        min-width: 140px;
+    }
+
+    .slider-container {
+        height: 250px;
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .skill-item {
+        flex: 0 1 calc(50% - 2rem);
+    }
+
+    .portfolio-item {
+        flex: 0 1 calc(50% - 2rem);
+    }
+
+    .certificate-card {
+        flex: 0 1 calc(50% - 1.5rem);
+    }
+
+    .slider-container {
+        height: 500px;
+    }
+}
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve touch scrolling */
+@media (max-width: 768px) {
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve button touch targets on mobile */
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-view,
+    .back-button,
+    .slider-nav,
+    .dot {
+        cursor: pointer;
+    }
+    
+    /* Add active states for touch feedback */
+    .btn-primary:active,
+    .btn-secondary:active,
+    .btn-view:active {
+        transform: scale(0.98);
     }
 }
