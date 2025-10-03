@@ -1609,11 +1609,17 @@ section {
         max-height: none; 
     }
     .slide {
-        padding: 0.5rem;
+        position: relative;
+        opacity: 1;
+        display: block;
+        height: auto;
+        padding: 0;
     }
 
     .slide img {
-        border-radius: 4px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 
     .slider-nav {
@@ -1631,7 +1637,7 @@ section {
     }
 
     .image-slider {
-        padding: 0.5rem;
+        padding: 1rem;
     }
     .slide {
         padding: 0; 
@@ -1694,7 +1700,11 @@ section {
     }
 
     .slider-container {
-        height: 300px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow: visible;
     }
 
     .project-header h1 {
@@ -1817,8 +1827,8 @@ img {
     .btn-view,
     .back-button,
     .slider-nav,
-    .dot {
-        cursor: pointer;
+    .slider-dots {
+        display: none;
     }
     
     /* Add active states for touch feedback */
