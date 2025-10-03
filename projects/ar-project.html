@@ -133,46 +133,6 @@
         </div>
     </div>
 
-    <script>
-        let slideIndex = 1;
-
-        function changeSlide(direction) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            
-            slides[slideIndex - 1].classList.remove('active');
-            dots[slideIndex - 1].classList.remove('active');
-            
-            slideIndex += direction;
-            
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            if (slideIndex < 1) {
-                slideIndex = slides.length;
-            }
-            
-            slides[slideIndex - 1].classList.add('active');
-            dots[slideIndex - 1].classList.add('active');
-        }
-
-        function currentSlide(slideNumber) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            
-            slides[slideIndex - 1].classList.remove('active');
-            dots[slideIndex - 1].classList.remove('active');
-            
-            slideIndex = slideNumber;
-            
-            slides[slideIndex - 1].classList.add('active');
-            dots[slideIndex - 1].classList.add('active');
-        }
-
-        // Auto-slide
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
-    </script>
+    <script src="../script.js"></script>
 </body>
 </html>
