@@ -1311,14 +1311,18 @@ section {
         position: fixed;
         top: 70px;
         right: -100%;
-        width: 70%;
+        width: 75%;
+        max-width: 300px;
         height: calc(100vh - 70px);
         background: white;
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 1rem;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
+        transition: right 0.3s ease-in-out;
         gap: 0;
+        z-index: 999;
+        display: flex; 
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -1327,14 +1331,20 @@ section {
 
     .nav-links li {
         width: 100%;
-        border-bottom: 1px solid var(--gray-light);
+        margin: 0;
     }
 
     .nav-links a {
         display: block;
-        padding: 1rem 0;
+        padding: 1.2rem 1rem;
         width: 100%;
+        border-bottom: 1px solid var(--gray-light);
+        min-height: 48px;
     }
+    .nav-links a::after {
+        display: none;
+    }
+
 
     /* Hamburger Animation */
     .mobile-menu.active span:nth-child(1) {
@@ -1362,9 +1372,6 @@ section {
     }
 
     /* Navigation */
-    .nav-links {
-        display: none;
-    }
 
     .mobile-menu {
         display: flex;
